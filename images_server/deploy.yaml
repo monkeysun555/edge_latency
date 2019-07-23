@@ -1,5 +1,5 @@
 #
-apiVersion: extensions/v1beta1
+apiVersion: v1
 kind: Deployment
 metadata:
   # annotations:
@@ -55,3 +55,5 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
+      nodeSelector:
+        nodeindex: 2
