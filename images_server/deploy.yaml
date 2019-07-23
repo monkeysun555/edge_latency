@@ -56,4 +56,4 @@ spec:
       securityContext: {}
       terminationGracePeriodSeconds: 30
       nodeSelector:
-        nodename: caas_master2
+        nodename: caas_master1
