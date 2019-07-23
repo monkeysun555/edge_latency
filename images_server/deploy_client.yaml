@@ -40,7 +40,7 @@ spec:
       # - args:
       #   - bash
       - name: echoclient
-        image: monkeysun555/centos_client:v1
+        image: monkeysun555/debug_client:v1
         imagePullPolicy: Never
         ports:
         - containerPort: 11111
