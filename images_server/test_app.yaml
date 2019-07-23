@@ -1,0 +1,25 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: echoserver
+  # namespace: infra
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: echoserver
+      annotations:
+        danm.k8s.io/interfaces: |
+          [
+            {"network":"vlan150", "ip":"dynamic"}
+          ]
+    spec:
+      containers:
+      - name: echoserver
+        image: myserver:v1
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
+      nodeSelector:
+        worktype: master

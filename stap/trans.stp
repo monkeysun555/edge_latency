@@ -1,0 +1,5 @@
+# # 1st, when packet is received
+
+probe netdev.receive {
+		printf("Time: %d,    ->> Device %s received a packet with protocol %d, length is: %d.\n", gettimeofday_us(), dev_name, protocol, length)
+}

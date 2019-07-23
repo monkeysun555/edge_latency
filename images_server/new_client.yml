@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: echoclient
+  labels:
+    app: echoclient
+spec:
+  containers:
+  - name: echoclient
+    image: newclient:v2
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 11111
+    command: ["/bin/bash", "-c", "--" ]
+    args: [ "while true; do sleep 30; done;"]
+  nodeSelector:
+    worktype: worker
