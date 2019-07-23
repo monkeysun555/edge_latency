@@ -39,7 +39,7 @@ spec:
       containers:
       # - args:
       #   - bash
-      -  name: echoclient
+      - name: echoclient
         image: monkeysun555/centos_client:v1
         imagePullPolicy: Never
         ports:
