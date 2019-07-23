@@ -1,0 +1,19 @@
+apiVersion: danm.k8s.io/v1
+kind: DanmNet
+metadata:
+  name: ipvlan
+  namespace: latency
+spec:
+  NetworkID: ipvlan
+  NetworkType: ipvlan
+  Options:
+    cidr: 172.16.15.0/28
+    allocation_pool:
+      start: 172.16.15.2
+      end: 172.16.15.14
+    host_device: enp135s0f0
+    rt_tables: 20
+    vlan: 2001
+
+
+
