@@ -41,7 +41,7 @@ spec:
       #   - bash
       - name: echoclient
         image: monkeysun555/debug_client:v1
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 11112
         command: ["/bin/bash", "-c", "--" ]
