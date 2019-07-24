@@ -10,7 +10,7 @@ metadata:
   name: echoserver
   # namespace: latent
   namespace: latency
-  # resourceVersion: "1114536"
+  resourceVersion: "1114536"
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -37,14 +37,14 @@ spec:
         run: echoserver
     spec:
       containers:
-      # - args:
-      #   - bash
-      - name: echoserver
+      - args:
+        - bash
         image: monkeysun555/debug_server:v1
-        imagePullPolicy: Always
+        imagePullPolicy: Never
         ports:
         - containerPort: 11111
         command: ["bash", "/etc/rc.start"]
+        name: echoserver
         resources: {}
         stdin: true
         terminationMessagePath: /dev/termination-log
