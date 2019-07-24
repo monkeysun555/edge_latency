@@ -40,7 +40,7 @@ spec:
       - args:
         - bash
         image: monkeysun555/debug_server:v1
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 11111
         command: ["bash", "/etc/rc.start"]
