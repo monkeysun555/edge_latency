@@ -39,10 +39,10 @@ spec:
       containers:
       - args:
         - bash
-        image: monkeysun555/centos_server:v1
+        image: monkeysun555/debug_server:v1
         imagePullPolicy: Never
         ports:
-        - containerPort: 8000
+        - containerPort: 11111
         command: ["bash", "/etc/rc.start"]
         name: echoserver
         resources: {}

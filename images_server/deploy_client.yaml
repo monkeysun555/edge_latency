@@ -43,7 +43,7 @@ spec:
         image: monkeysun555/debug_client:v1
         imagePullPolicy: Never
         ports:
-        - containerPort: 11111
+        - containerPort: 11112
         command: ["/bin/bash", "-c", "--" ]
         args: [ "while true; do sleep 30; done;"]
         resources: {}
