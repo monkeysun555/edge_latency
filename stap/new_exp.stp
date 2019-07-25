@@ -8,21 +8,21 @@ probe begin{
 	printf("Probing starts. Time is: %d.\n", previous_p)
 }
 
-probe netdev.receive {
-	#if (dev_name == "wlan0" || dev_name == "eth0" ) {
-		# printf("<====================================================>\n")
-		printf("Time: %d,    ->> Device %s received a packet with protocol %d, length is: %d.\n", gettimeofday_us(), dev_name, protocol, length)
-	#}
-}
+# probe netdev.receive {
+#	if (dev_name == "wlan0" || dev_name == "eth0" ) {
+#		printf("<====================================================>\n")
+#		printf("Time: %d,    ->> Device %s received a packet with protocol %d, length is: %d.\n", gettimeofday_us(), dev_name, protocol, length)
+#	}
+#}
 
 # # 2nd, when packet is received
-probe kernel.function("ip_rcv") {
-	if ( kernel_string($dev->name) != "lo" ) {
-		printf("Time: %d,    ->> IP is received! Length is: %d, from %s, protocol: %d. exec: %s. \n", gettimeofday_us(),
-			 $skb->len, kernel_string($dev->name), $skb->protocol, execname())
-
-	}
-}
+# probe kernel.function("ip_rcv") {
+#	if ( kernel_string($dev->name) != "lo" ) {
+#		printf("Time: %d,    ->> IP is received! Length is: %d, from %s, protocol: %d. exec: %s. \n", gettimeofday_us(),
+#			 $skb->len, kernel_string($dev->name), $skb->protocol, execname())
+#
+#	}
+# }
 
 probe tcp.receive {
 	if (sport ==  11111 && dport == 8000) {
