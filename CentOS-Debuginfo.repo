@@ -1,0 +1,15 @@
+#Debug Info
+[debuginfo]
+name=CentOS-$releasever - DebugInfo
+# CentOS-4
+#baseurl=http://debuginfo.centos.org/$releasever/
+# CentOS-5
+baseurl=http://debuginfo.centos.org/$releasever/$basearch/
+gpgcheck=0
+enabled=0
+# CentOS-4
+#gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-$releasever
+# CentOS-5
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-5
+protect=1
+priority=1
