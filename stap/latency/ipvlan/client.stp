@@ -35,7 +35,7 @@ probe kernel.function("ip_rcv") {
 }
 
 probe tcp.receive {
-	if (sport ==  11112 && dport == 11111) {
+	if (sport ==  11111 && dport == 11112) {
 		timearray["tcp_receive", tcp_recv] = gettimeofday_us()
 		len_array["tcp_receive", tcp_recv] = $skb->len
 		tag_array["tcp_receive", tcp_recv] = execname()
