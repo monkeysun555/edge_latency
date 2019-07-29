@@ -1,7 +1,7 @@
 # # 1st, when packet is received
 
 global process = "swapper/5"
-global application = "cent_client.out"
+global application = "cent_server.out"
 
 probe begin{
 	previous_p = gettimeofday_us()
@@ -32,11 +32,11 @@ probe tcp.receive {
 }
 
 probe tcp.recvmsg {
- 	if (execname() == process  && saddr != daddr){
+ 	#if (execname() == process  && saddr != daddr){
  		printf("Time: %d,    ->> TCP msg packet is received, source: %s, dst ip: %s, sport is: %d dport is: %d, len is: %d, exec: %s.\n",
  		 gettimeofday_us(), saddr, daddr, sport, dport, size, execname())
  		# printf("Execname is: %s, pid: %d\n", execname(), pid())
- 	}
+ 	#}
 }
 
 probe udp.recvmsg {
@@ -108,13 +108,13 @@ probe udp.sendmsg{
 }
 
 probe kernel.function("ip_output") {
-	if (execname() == application && ($skb->len ==152 || $skb->len ==102 )) {
+	if (execname() == application) {
 		printf("Time: %d,    <<- IP is sendout!, length is: %d execname: %s.\n", gettimeofday_us(), $skb->len, execname())
 	}
 }
 
 probe netdev.transmit {
-	if (dev_name != "lo" && (length < 166 && length >= 100)) {
+	if (dev_name != "lo" ) {
 		printf("Time: %d,    <<- Device %s is sending (queued) a packet with protocol %d, length is %d\n", gettimeofday_us(), dev_name, protocol, length)
 	}
 }
