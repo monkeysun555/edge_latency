@@ -17,7 +17,7 @@ global previous_p
 
 
 probe netdev.receive {
-	if (dev_name == "enp135s0f0" && (length < 166 && length >= 100)) {
+	if (protocol == 8 && (dev_name == "eth1" || dev_name == "ipvlan.2001" || dev_name == "enp135s0f0")) {
 		timearray["netdev_recv", net_recv] = gettimeofday_us()
 		len_array["netdev_recv", net_recv] = length 
 		tag_array["netdev_recv", net_recv] = dev_name 
@@ -35,7 +35,7 @@ probe kernel.function("ip_rcv") {
 }
 
 probe tcp.receive {
-	if (sport ==  11111 && dport == 11112) {
+	if (sport ==  11111 && dport == 11112 && $skb->len >= 80) {
 		timearray["tcp_receive", tcp_recv] = gettimeofday_us()
 		len_array["tcp_receive", tcp_recv] = $skb->len
 		tag_array["tcp_receive", tcp_recv] = execname()
