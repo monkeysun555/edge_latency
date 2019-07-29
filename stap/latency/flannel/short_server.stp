@@ -18,7 +18,7 @@ global previous_p
 
 probe netdev.receive {
 	#if (protocol == 8 && (dev_name == "enp94s0f1" || dev_name == "flannel.1" || dev_name == "cni0")) {
-	if (protocol == 8 && dev_name == "enp94s0f1" ) {
+	if (protocol == 8 && (dev_name == "enp94s0f0" || dev_name == "enp94s0f1")) {
 		timearray["netdev_recv", net_recv] = gettimeofday_us()
 		len_array["netdev_recv", net_recv] = length 
 		tag_array["netdev_recv", net_recv] = dev_name 
