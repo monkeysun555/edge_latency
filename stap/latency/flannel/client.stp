@@ -1,0 +1,102 @@
+global application = "cent_client.out"
+global timearray, len_array, tag_array
+global net_recv = 0
+global ip_recv = 0
+global tcp_recv = 0
+global socket_recv = 0
+global socket_send = 0
+global tcp_send = 0
+global ip_send = 0
+global net_send = 0
+
+probe begin{
+	previous_p = gettimeofday_us()
+	printf("Probing starts. Time is: %d.\n", previous_p)
+}
+global previous_p
+
+
+probe netdev.receive {
+	if (protocol == 8 && (dev_name == "enp94s0f0" || dev_name == "flannel.1" || dev_name == "cni0")) {
+		timearray["netdev_recv", net_recv] = gettimeofday_us()
+		len_array["netdev_recv", net_recv] = length 
+		tag_array["netdev_recv", net_recv] = dev_name 
+		net_recv ++
+	}
+}
+
+probe kernel.function("ip_rcv") {
+	if ($dev->name && (kernel_string($dev->name) == "vlan144" ||  kernel_string($dev->name) == "flannel.1" || kernel_string($dev->name) == "eth0" ||  kernel_string($dev->name) == "cni0")) {
+		timearray["ip_recv", ip_recv] = gettimeofday_us()
+		len_array["ip_recv", ip_recv] = $skb->len
+		tag_array["ip_recv", ip_recv] = kernel_string($dev->name)
+		ip_recv ++
+	}
+}
+
+probe tcp.receive {
+	if (sport ==  11111 && dport == 11112 && $skb->len >= 80) {
+		timearray["tcp_receive", tcp_recv] = gettimeofday_us()
+		len_array["tcp_receive", tcp_recv] = $skb->len
+		tag_array["tcp_receive", tcp_recv] = execname()
+		tcp_recv ++
+	}
+}
+
+probe socket.receive {
+	if (execname() == application) {
+		timearray["socket_recv", socket_recv] = gettimeofday_us()
+		len_array["socket_recv", socket_recv] = size
+		tag_array["socket_recv", socket_recv] = execname()
+		socket_recv ++
+	}
+}
+
+probe socket.sendmsg {
+	if (execname() == application) {
+		timearray["socket_send", socket_send] = gettimeofday_us()
+		len_array["socket_send", socket_send] = size
+		tag_array["socket_send", socket_send] = execname()
+		socket_send ++
+	}
+}
+
+
+probe tcp.sendmsg {
+	if (execname() == application ){
+		timearray["tcp_send", tcp_send] = gettimeofday_us()
+		len_array["tcp_send", tcp_send] = $size 
+		tag_array["tcp_send", tcp_send] = execname()
+		tcp_send ++
+	}
+}
+
+
+probe kernel.function("ip_output") {
+	if ( execname() == application) {
+		timearray["ip_send", ip_send] = gettimeofday_us()
+		len_array["ip_send", ip_send] = $skb->len
+		tag_array["ip_send", ip_send] = execname()
+		ip_send ++	
+	}
+}
+
+probe netdev.transmit {
+	if ((protocol == 8 || protocol == 129 ) && (dev_name == "cni0" || dev_name == "veth08e5e755" || dev_name == "eth0" || dev_name == "flannel.1" || dev_name == "vlan144" || dev_name == "bond0" || dev_name == "enp94s0f1")) {
+		timearray["net_send", net_send] = gettimeofday_us()
+		len_array["net_send", net_send] = length
+		tag_array["net_send", net_send] = dev_name
+		net_send ++
+	}
+}
+
+probe end{
+	foreach ([attr, num] in timearray) {
+		gap = timearray[attr, num] - previous_p
+		printf("Time: %d    , time gap is: %10d, probe function is: %20s, tag is: %20s, packet length is: %5d. \n", timearray[attr,num], gap, 
+			attr, tag_array[attr,num], len_array[attr, num])
+		previous_p = timearray[attr, num]
+	}
+}
+
+

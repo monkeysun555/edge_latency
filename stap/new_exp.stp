@@ -24,7 +24,7 @@ probe kernel.function("ip_rcv") {
 }
 
 probe tcp.receive {
-	if (sport ==  11111 && dport == 11112) {
+	if (sport ==  11112 && dport == 11111) {
 		printf("Time: %d,    ->> TCP packet is received, source: %s, dst ip: %s, sport is: %d dport is: %d, len is: %d, exec: %s.\n",
 		 gettimeofday_us(), saddr, daddr, sport, dport, $skb->len, execname())
 		# printf("Execname is: %s, pid: %d\n", execname(), pid())
