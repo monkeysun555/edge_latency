@@ -9,7 +9,7 @@ metadata:
     danm.k8s.io/interfaces: |
       [
         {"network":"management", "ip":"dynamic"},
-        {"network":"sriov-a", "ip":"dynamic"}
+        {"network":"sriov-a", "ip":"dynamic"},
         {"network":"ipvlan", "ip":"dynamic"}
       ]
 spec:
