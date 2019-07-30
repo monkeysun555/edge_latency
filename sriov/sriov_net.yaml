@@ -1,0 +1,27 @@
+apiVersion: danm.k8s.io/v1
+kind: DanmNet
+metadata:
+  name: management
+  namespace: example-sriov
+spec:
+  NetworkID: flannel
+  NetworkType: flannel
+---
+apiVersion: danm.k8s.io/v1
+kind: DanmNet
+metadata:
+  name: sriov-a
+  namespace: example-sriov
+spec:
+  NetworkID: sriov-a
+  NetworkType: sriov
+  Options:
+    device_pool: "nokia.k8s.io/sriov_ens11f1"
+    container_prefix: first_path
+    rt_tables: 250
+    vlan: 2001
+    cidr: 172.16.16.0/28
+    allocation_pool:
+      start: 172.16.16.2
+      end: 172.16.16.14
+
