@@ -1,6 +1,6 @@
 kind: Namespace
 apiVersion: v1
 metadata: 
-  name: example-sriov
+  name: latency
   labels:
-    name: example-sriov
+    name: latency

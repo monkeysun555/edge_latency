@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: sriov-pod
-  namespace: example-sriov
+  name: echoserver
+  namespace: latency
   labels:
     env: test
   annotations:
@@ -10,18 +10,19 @@ metadata:
       [
         {"network":"management", "ip":"dynamic"},
         {"network":"sriov-a", "ip":"dynamic"}
+        {"network":"ipvlan", "ip":"dynamic"}
       ]
 spec:
   containers:
-  - name: sriov-pod
-    image: registry.kube-system.svc.rec.io:5555/busybox:latest
+  - name: echoserver
+    image: monkeysun555/debug_server:v1
     args:
-      - sleep
-      - "1000"
+      - bash
     resources:
       requests:
         nokia.k8s.io/sriov_ens11f1: '1'
       limits:
         nokia.k8s.io/sriov_ens11f1: '1'
   nodeSelector:
-    sriov: enabled
+    # sriov: enabled
+    worktype: caas_master1

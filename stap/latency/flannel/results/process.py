@@ -35,7 +35,7 @@ def process_recording():
 					parse = line.split()
 					if not len(parse) == 18:
 						continue
-					if parse[17] == '152.' and parse[13] == 'enp94s0f1,' and parse[10] == 'netdev_recv,':
+					if parse[17] == '102.' and parse[13] == 'enp135s0f0,' and parse[10] == 'netdev_recv,':
 						netdev_recv_time = int(parse[1])
 					# elif parse[17] == '102.' and parse[13] == 'eth1,' and parse[10] == 'ip_recv,':
 					# 	ip_recv_time = int(parse[1])
@@ -53,7 +53,7 @@ def process_recording():
 						socket_send_time = int(parse[1])
 						if socket_send_time - socket_recv_time > 0 and socket_send_time - socket_recv_time < 100:
 							server_application_time.append(socket_send_time - socket_recv_time)
-					elif parse[17] == '170.' and parse[13] == 'enp94s0f1,' and parse[10] == 'net_send,':
+					elif parse[17] == '116.' and parse[13] == 'enp135s0f0,' and parse[10] == 'net_send,':
 						netdev_send_time = int(parse[1])
 						egress = netdev_send_time - socket_send_time
 						if egress <= 0 or egress > 300:
