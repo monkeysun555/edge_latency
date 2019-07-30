@@ -16,8 +16,8 @@ spec:
   containers:
   - name: echoserver
     image: monkeysun555/debug_server:v1
-    args:
-      - bash
+    command: ["/bin/bash", "-c", "--" ]
+    args: [ "while true; do sleep 30; done;"]
     resources:
       requests:
         nokia.k8s.io/sriov_ens11f1: '1'
@@ -25,4 +25,4 @@ spec:
         nokia.k8s.io/sriov_ens11f1: '1'
   nodeSelector:
     # sriov: enabled
-    worktype: caas_master1
+    nodename: caas_master1

@@ -16,12 +16,12 @@ spec:
   containers:
   - name: echoclient
     image: monkeysun555/debug_client:v1
-    args:
-      - bash
+    command: ["/bin/bash", "-c", "--" ]
+    args: [ "while true; do sleep 30; done;"]
     resources:
       requests:
         nokia.k8s.io/sriov_ens11f1: '1'
       limits:
         nokia.k8s.io/sriov_ens11f1: '1'
   nodeSelector:
-    worktype: caas_master2
+    nodename: caas_master2
