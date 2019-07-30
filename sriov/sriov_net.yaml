@@ -19,11 +19,11 @@ spec:
     device_pool: "nokia.k8s.io/sriov_ens11f1"
     container_prefix: first_path
     rt_tables: 250
-    vlan: 2001
-    cidr: 172.16.16.0/28
+    vlan: 2005
+    cidr: 172.16.16.64/28
     allocation_pool:
-      start: 172.16.16.2
-      end: 172.16.16.14
+      start: 172.16.16.66
+      end: 172.16.16.78
 ---
 apiVersion: danm.k8s.io/v1
 kind: DanmNet
@@ -34,11 +34,11 @@ spec:
   NetworkID: ipvlan
   NetworkType: ipvlan
   Options:
-    cidr: 172.16.15.0/28
+    cidr: 172.16.16.0/28
     allocation_pool:
-      start: 172.16.15.2
-      end: 172.16.15.14
-    host_device: enp135s0f0
+      start: 172.16.16.2
+      end: 172.16.16.14
+    host_device: ens11f0
     rt_tables: 20
     vlan: 2001
 
