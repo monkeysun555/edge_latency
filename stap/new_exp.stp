@@ -1,6 +1,6 @@
 # # 1st, when packet is received
-application = "cent_server.out"
-process = "swapper/3"
+global application = "cent_server.out"
+global process = "swapper/3"
 probe begin{
 	previous_p = gettimeofday_us()
 	printf("Probing starts. Time is: %d.\n", previous_p)
