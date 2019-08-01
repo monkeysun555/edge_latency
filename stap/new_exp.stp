@@ -1,28 +1,28 @@
 # # 1st, when packet is received
-global application = "cent_client.out"
-global process = "swapper/3"
+global application = "iperf3"
+global process = "swapper/5"
 probe begin{
-	previous_p = gettimeofday_us()
+	previous_p = gettimeofday_ns()
 	printf("Probing starts. Time is: %d.\n", previous_p)
 }
 
 probe netdev.receive {
-	printf("Time: %d,    ->> Device %s received a packet with protocol %d, length is: %d.\n", gettimeofday_us(), dev_name, protocol, length)
+	printf("Time: %d,    ->> Device %s received a packet with protocol %d, length is: %d.\n", gettimeofday_ns(), dev_name, protocol, length)
 }
 
  # 2nd, when packet is received
 probe kernel.function("ip_rcv") {
-	printf("Time: %d,    ->> IP is received! Length is: %d, from %s, protocol: %d. exec: %s. \n", gettimeofday_us(), $skb->len, kernel_string($dev->name), $skb->protocol, execname())
+	printf("Time: %d,    ->> IP is received! Length is: %d, from %s, protocol: %d. exec: %s. \n", gettimeofday_ns(), $skb->len, kernel_string($dev->name), $skb->protocol, execname())
 }
 
 probe tcp.receive {
-	printf("Time: %d,    ->> TCP packet is received, source: %s, dst ip: %s, sport is: %d dport is: %d, len is: %d, exec: %s.\n", gettimeofday_us(), saddr, daddr, sport, dport, $skb->len, execname())
+	printf("Time: %d,    ->> TCP packet is received, source: %s, dst ip: %s, sport is: %d dport is: %d, len is: %d, exec: %s.\n", gettimeofday_ns(), saddr, daddr, sport, dport, $skb->len, execname())
 }
 
 probe tcp.recvmsg {
  	#if (execname() == process  && saddr != daddr){
  		printf("Time: %d,    ->> TCP msg packet is received, source: %s, dst ip: %s, sport is: %d dport is: %d, len is: %d, exec: %s.\n",
- 		 gettimeofday_us(), saddr, daddr, sport, dport, size, execname())
+ 		 gettimeofday_ns(), saddr, daddr, sport, dport, size, execname())
  		# printf("Execname is: %s, pid: %d\n", execname(), pid())
  	#}
 }
@@ -30,7 +30,7 @@ probe tcp.recvmsg {
 probe udp.recvmsg {
  	# if (execname() == process  && saddr != daddr){
  		printf("Time: %d,    ->> UDP msg packet is received, source: %s, dst ip: %s, sport is: %d dport is: %d, len is: %d, exec: %s.\n",
- 		 gettimeofday_us(), saddr, daddr, sport, dport, $len, execname())
+ 		 gettimeofday_ns(), saddr, daddr, sport, dport, $len, execname())
  		# printf("Execname is: %s, pid: %d\n", execname(), pid())
  	# }
 }
@@ -43,79 +43,79 @@ probe udp.recvmsg {
 
 # # When TCP packet is processed, and queued
 # # probe kernel.function("tcp_data_queue") {
-# # 	printf("Time: %d,    ->> TCP packet is queued, length is: %d.\n", gettimeofday_us(), $skb->len)
+# # 	printf("Time: %d,    ->> TCP packet is queued, length is: %d.\n", gettimeofday_ns(), $skb->len)
 # # }
 
 # # probe syscall.poll {
 # # 	if (execname() == "python3") {
-# # 		printf("Time: %d,    Poll is called from process : %d, name is %s\n", gettimeofday_us(), pid(), execname())
+# # 		printf("Time: %d,    Poll is called from process : %d, name is %s\n", gettimeofday_ns(), pid(), execname())
 # # 	}
 # # }
 
 # # probe syscall.poll.return {
 # # 	if (retval != 0 ) {
-# # 		printf("Time: %d,    ->> Poll is returned %s in process : %d, name is %s.\n", gettimeofday_us(), retstr, pid(), execname())
+# # 		printf("Time: %d,    ->> Poll is returned %s in process : %d, name is %s.\n", gettimeofday_ns(), retstr, pid(), execname())
 # # 	}
 # # }
 
 # # probe syscall.epoll_wait.return {
 # # 	if (retval != 0 ) {
-# # 		printf("Time: %d,    ->> Epoll_wait is returned %s in process : %d, name is %s.\n", gettimeofday_us(), retstr, pid(), execname())
+# # 		printf("Time: %d,    ->> Epoll_wait is returned %s in process : %d, name is %s.\n", gettimeofday_ns(), retstr, pid(), execname())
 # # 	}
 # # }
 
 probe socket.recvmsg {
 	if (execname() == application || execname() == process) {
-		printf("Time: %d,    ->> Socket receive msg, and execname is: %s, len is: %d.\n", gettimeofday_us(), execname(), size)
+		printf("Time: %d,    ->> Socket receive msg, and execname is: %s, len is: %d.\n", gettimeofday_ns(), execname(), size)
 	}
 }
 
 probe socket.receive {
 	if (execname() == application || execname() == process) {
-		printf("Time: %d,    ->> Socket receive data, and execname is: %s.\n", gettimeofday_us(), execname())
+		printf("Time: %d,    ->> Socket receive data, and execname is: %s.\n", gettimeofday_ns(), execname())
 	}
 }
 
 # ##### Application process
 probe socket.sendmsg {
 	if (execname() == application || execname() == process) {
-		printf("Time: %d,    <<- Socket send data. execname is: %s, len is: %d.\n", gettimeofday_us(), execname(), size)
+		printf("Time: %d,    <<- Socket send data. execname is: %s, len is: %d.\n", gettimeofday_ns(), execname(), size)
 	}
 }
 
 probe tcp.sendmsg {
 	if ((execname() == application || execname() == process) && $size != 32 ){
-		printf("Time: %d,    <<- TCP packet is send out, len is: %d, execname is: %s.\n", gettimeofday_us(), $size, execname())
+		printf("Time: %d,    <<- TCP packet is send out, len is: %d, execname is: %s.\n", gettimeofday_ns(), $size, execname())
 	}
 }
 
 probe udp.sendmsg{
 	# if ((execname() == application || execname() == process)){
-		printf("Time: %d,    <<- UDP packet is send out, len is: %d, execname is: %s.\n", gettimeofday_us(), $len, execname())
+		printf("Time: %d,    <<- UDP packet is send out, len is: %d, execname is: %s.\n", gettimeofday_ns(), $len, execname())
 	# }
 }
 
 probe kernel.function("ip_output") {
-	if (execname() == application) {
-		printf("Time: %d,    <<- IP is sendout!, length is: %d execname: %s.\n", gettimeofday_us(), $skb->len, execname())
-	}
+	# if (execname() == application) {
+		printf("Time: %d,    <<- IP is sendout!, length is: %d execname: %s.\n", gettimeofday_ns(), $skb->len, execname())
+	# }
 }
 
 probe netdev.transmit {
 	if (dev_name != "lo" ) {
-		printf("Time: %d,    <<- Device %s is sending (queued) a packet with protocol %d, length is %d\n", gettimeofday_us(), dev_name, protocol, length)
+		printf("Time: %d,    <<- Device %s is sending (queued) a packet with protocol %d, length is %d\n", gettimeofday_ns(), dev_name, protocol, length)
 	}
 }
 
 # # probe socket.sendmsg {
 # # 	if (execname() == process) {
-# # 		printf("Time: %d,    <<- Socket send data. execname is: %s, len is: %d.\n", gettimeofday_us(), execname(), size)
+# # 		printf("Time: %d,    <<- Socket send data. execname is: %s, len is: %d.\n", gettimeofday_ns(), execname(), size)
 # # 	}
 # # }
 
 # # probe socket.sendmsg.return {
 # # 	# if (execname() == process) {
-# # 		printf("Time: %d,    <<- Socket send data returned.\n", gettimeofday_us())
+# # 		printf("Time: %d,    <<- Socket send data returned.\n", gettimeofday_ns())
 # # 	# }
 # # }
 
@@ -123,7 +123,7 @@ probe netdev.transmit {
 
 # # probe kernel.function("tcp_sendmsg"){
 # # 	if (execname() == application || execname() == process){
-# # 		printf("Time: %d,    <<- TCP packet is send out, size is: %d, exec: %s.\n", gettimeofday_us(), $size, execname())
+# # 		printf("Time: %d,    <<- TCP packet is send out, size is: %d, exec: %s.\n", gettimeofday_ns(), $size, execname())
 # # 	}
 # # }
 # # # 2nd, when packet is received
