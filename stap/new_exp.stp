@@ -1,5 +1,5 @@
 # # 1st, when packet is received
-global application = "cent_server.out"
+global application = "cent_client.out"
 global process = "swapper/3"
 probe begin{
 	previous_p = gettimeofday_us()
