@@ -1,0 +1,62 @@
+Time: 1564609682218840,    ->> Socket receive msg, and execname is: cent_server.out, len is: 1024.
+Time: 1564609682218841,    ->> TCP msg packet is received, source: 172.16.16.66, dst ip: 172.16.16.67, sport is: 11111 dport is: 11112, len is: 1024, exec: cent_server.out.
+Time: 1564609682219409,    ->> Device first_path1 received a packet with protocol 8, length is: 102.
+Time: 1564609682219410,    ->> IP is received! Length is: 102, from first_path1, protocol: 8. exec: swapper/31. 
+Time: 1564609682219414,    ->> TCP packet is received, source: 172.16.16.67, dst ip: 172.16.16.66, sport is: 11112 dport is: 11111, len is: 82, exec: swapper/31.
+Time: 1564609682219420,    ->> Socket receive data, and execname is: cent_server.out.
+Time: 1564609682219421,    <<- Socket send data. execname is: cent_server.out, len is: 50.
+Time: 1564609682219422,    <<- TCP packet is send out, len is: 50, execname is: cent_server.out.
+Time: 1564609682219423,    <<- IP is sendout!, length is: 102 execname: cent_server.out.
+Time: 1564609682219424,    <<- Device first_path1 is sending (queued) a packet with protocol 8, length is 116
+Time: 1564609682219426,    ->> Socket receive msg, and execname is: cent_server.out, len is: 1024.
+Time: 1564609682219428,    ->> TCP msg packet is received, source: 172.16.16.66, dst ip: 172.16.16.67, sport is: 11111 dport is: 11112, len is: 1024, exec: cent_server.out.
+Time: 1564609682220000,    ->> Device first_path1 received a packet with protocol 8, length is: 102.
+Time: 1564609682220000,    ->> IP is received! Length is: 102, from first_path1, protocol: 8. exec: swapper/31. 
+Time: 1564609682220005,    ->> TCP packet is received, source: 172.16.16.67, dst ip: 172.16.16.66, sport is: 11112 dport is: 11111, len is: 82, exec: swapper/31.
+Time: 1564609682220012,    ->> Socket receive data, and execname is: cent_server.out.
+Time: 1564609682220013,    <<- Socket send data. execname is: cent_server.out, len is: 50.
+Time: 1564609682220014,    <<- TCP packet is send out, len is: 50, execname is: cent_server.out.
+Time: 1564609682220015,    <<- IP is sendout!, length is: 102 execname: cent_server.out.
+Time: 1564609682220016,    <<- Device first_path1 is sending (queued) a packet with protocol 8, length is 116
+Time: 1564609682220018,    ->> Socket receive msg, and execname is: cent_server.out, len is: 1024.
+Time: 1564609682220020,    ->> TCP msg packet is received, source: 172.16.16.66, dst ip: 172.16.16.67, sport is: 11111 dport is: 11112, len is: 1024, exec: cent_server.out.
+Time: 1564609682220600,    ->> Device first_path1 received a packet with protocol 8, length is: 102.
+Time: 1564609682220601,    ->> IP is received! Length is: 102, from first_path1, protocol: 8. exec: swapper/31. 
+Time: 1564609682220606,    ->> TCP packet is received, source: 172.16.16.67, dst ip: 172.16.16.66, sport is: 11112 dport is: 11111, len is: 82, exec: swapper/31.
+Time: 1564609682220612,    ->> Socket receive data, and execname is: cent_server.out.
+Time: 1564609682220613,    <<- Socket send data. execname is: cent_server.out, len is: 50.
+Time: 1564609682220614,    <<- TCP packet is send out, len is: 50, execname is: cent_server.out.
+Time: 1564609682220615,    <<- IP is sendout!, length is: 102 execname: cent_server.out.
+Time: 1564609682220616,    <<- Device first_path1 is sending (queued) a packet with protocol 8, length is 116
+Time: 1564609682220618,    ->> Socket receive msg, and execname is: cent_server.out, len is: 1024.
+Time: 1564609682220620,    ->> TCP msg packet is received, source: 172.16.16.66, dst ip: 172.16.16.67, sport is: 11111 dport is: 11112, len is: 1024, exec: cent_server.out.
+Time: 1564609682221187,    ->> Device first_path1 received a packet with protocol 8, length is: 102.
+Time: 1564609682221188,    ->> IP is received! Length is: 102, from first_path1, protocol: 8. exec: swapper/31. 
+Time: 1564609682221193,    ->> TCP packet is received, source: 172.16.16.67, dst ip: 172.16.16.66, sport is: 11112 dport is: 11111, len is: 82, exec: swapper/31.
+Time: 1564609682221199,    ->> Socket receive data, and execname is: cent_server.out.
+Time: 1564609682221200,    <<- Socket send data. execname is: cent_server.out, len is: 50.
+Time: 1564609682221201,    <<- TCP packet is send out, len is: 50, execname is: cent_server.out.
+Time: 1564609682221202,    <<- IP is sendout!, length is: 102 execname: cent_server.out.
+Time: 1564609682221203,    <<- Device first_path1 is sending (queued) a packet with protocol 8, length is 116
+Time: 1564609682221205,    ->> Socket receive msg, and execname is: cent_server.out, len is: 1024.
+Time: 1564609682221207,    ->> TCP msg packet is received, source: 172.16.16.66, dst ip: 172.16.16.67, sport is: 11111 dport is: 11112, len is: 1024, exec: cent_server.out.
+Time: 1564609682221775,    ->> Device first_path1 received a packet with protocol 8, length is: 102.
+Time: 1564609682221776,    ->> IP is received! Length is: 102, from first_path1, protocol: 8. exec: swapper/31. 
+Time: 1564609682221780,    ->> TCP packet is received, source: 172.16.16.67, dst ip: 172.16.16.66, sport is: 11112 dport is: 11111, len is: 82, exec: swapper/31.
+Time: 1564609682221787,    ->> Socket receive data, and execname is: cent_server.out.
+Time: 1564609682221788,    <<- Socket send data. execname is: cent_server.out, len is: 50.
+Time: 1564609682221789,    <<- TCP packet is send out, len is: 50, execname is: cent_server.out.
+Time: 1564609682221790,    <<- IP is sendout!, length is: 102 execname: cent_server.out.
+Time: 1564609682221791,    <<- Device first_path1 is sending (queued) a packet with protocol 8, length is 116
+Time: 1564609682221793,    ->> Socket receive msg, and execname is: cent_server.out, len is: 1024.
+Time: 1564609682221795,    ->> TCP msg packet is received, source: 172.16.16.66, dst ip: 172.16.16.67, sport is: 11111 dport is: 11112, len is: 1024, exec: cent_server.out.
+Time: 1564609682222363,    ->> Device first_path1 received a packet with protocol 8, length is: 102.
+Time: 1564609682222364,    ->> IP is received! Length is: 102, from first_path1, protocol: 8. exec: swapper/31. 
+Time: 1564609682222368,    ->> TCP packet is received, source: 172.16.16.67, dst ip: 172.16.16.66, sport is: 11112 dport is: 11111, len is: 82, exec: swapper/31.
+Time: 1564609682222374,    ->> Socket receive data, and execname is: cent_server.out.
+Time: 1564609682222376,    <<- Socket send data. execname is: cent_server.out, len is: 50.
+Time: 1564609682222376,    <<- TCP packet is send out, len is: 50, execname is: cent_server.out.
+Time: 1564609682222378,    <<- IP is sendout!, length is: 102 execname: cent_server.out.
+Time: 1564609682222379,    <<- Device first_path1 is sending (queued) a packet with protocol 8, length is 116
+Time: 1564609682222380,    ->> Socket receive msg, and execname is: cent_server.out, len is: 1024.
+Time: 1564609682222382,    ->> TCP msg packet is received, source: 172.16.16.66, dst ip: 172.16.16.67, sport is: 11111 dport is: 11112, len is: 1024, exec: cent
