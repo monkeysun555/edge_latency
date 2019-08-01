@@ -10,7 +10,7 @@ global socket_send = 0
 global net_send = 0
 
 probe begin{
-	previous_p = gettimeofday_us()
+	previous_p = gettimeofday_ns()
 	printf("Probing starts. Time is: %d.\n", previous_p)
 }
 global previous_p
@@ -18,7 +18,7 @@ global previous_p
 
 probe netdev.receive {
 	if (dev_name == "first_path1" && (length < 166 && length >= 100)) {
-		timearray["netdev_recv", net_recv] = gettimeofday_us()
+		timearray["netdev_recv", net_recv] = gettimeofday_ns()
 		len_array["netdev_recv", net_recv] = length 
 		tag_array["netdev_recv", net_recv] = dev_name 
 		net_recv ++
@@ -27,7 +27,7 @@ probe netdev.receive {
 
 #probe kernel.function("ip_rcv") {
 #	if ($dev->name && kernel_string($dev->name) == "eth1"  && ($skb->len < 200 && $skb->len > 80)) {
-#		timearray["ip_recv", ip_recv] = gettimeofday_us()
+#		timearray["ip_recv", ip_recv] = gettimeofday_ns()
 #		len_array["ip_recv", ip_recv] = $skb->len
 #		tag_array["ip_recv", ip_recv] = kernel_string($dev->name)
 #		ip_recv ++
@@ -36,7 +36,7 @@ probe netdev.receive {
 
 # probe tcp.receive {
 # 	if (sport ==  11112 && dport == 11111) {
-# 		timearray["tcp_receive", tcp_recv] = gettimeofday_us()
+# 		timearray["tcp_receive", tcp_recv] = gettimeofday_ns()
 # 		len_array["tcp_receive", tcp_recv] = $skb->len
 # 		tag_array["tcp_receive", tcp_recv] = execname()
 # 		tcp_recv ++
@@ -45,7 +45,7 @@ probe netdev.receive {
 
 probe socket.receive {
 	if (execname() == application) {
-		timearray["socket_recv", socket_recv] = gettimeofday_us()
+		timearray["socket_recv", socket_recv] = gettimeofday_ns()
 		len_array["socket_recv", socket_recv] = size
 		tag_array["socket_recv", socket_recv] = execname()
 		socket_recv ++
@@ -54,7 +54,7 @@ probe socket.receive {
 
 probe socket.sendmsg {
 	if (execname() == application) {
-		timearray["socket_send", socket_send] = gettimeofday_us()
+		timearray["socket_send", socket_send] = gettimeofday_ns()
 		len_array["socket_send", socket_send] = size
 		tag_array["socket_send", socket_send] = execname()
 		socket_send ++
@@ -64,7 +64,7 @@ probe socket.sendmsg {
 
 # probe tcp.sendmsg {
 # 	if (execname() == application ){
-# 		timearray["tcp_send", tcp_send] = gettimeofday_us()
+# 		timearray["tcp_send", tcp_send] = gettimeofday_ns()
 # 		len_array["tcp_send", tcp_send] = $size 
 # 		tag_array["tcp_send", tcp_send] = execname()
 # 		tcp_send ++
@@ -74,7 +74,7 @@ probe socket.sendmsg {
 
 # probe kernel.function("ip_output") {
 # 	if ( execname() == application) {
-# 		timearray["ip_send", ip_send] = gettimeofday_us()
+# 		timearray["ip_send", ip_send] = gettimeofday_ns()
 # 		len_array["ip_send", ip_send] = $skb->len
 # 		tag_array["ip_send", ip_send] = execname()
 # 		ip_send ++	
@@ -83,7 +83,7 @@ probe socket.sendmsg {
 
 probe netdev.transmit {
 	if (protocol == 8 && dev_name ==  "first_path1") {
-		timearray["net_send", net_send] = gettimeofday_us()
+		timearray["net_send", net_send] = gettimeofday_ns()
 		len_array["net_send", net_send] = length
 		tag_array["net_send", net_send] = dev_name
 		net_send ++
