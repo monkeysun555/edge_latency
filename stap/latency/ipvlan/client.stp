@@ -17,7 +17,7 @@ global previous_p
 
 
 probe netdev.receive {
-	if (protocol == 8 && =dev_name == "ens11f0") {
+	if (protocol == 8 && dev_name == "ens11f0") {
 		timearray["netdev_recv", net_recv] = gettimeofday_ns()
 		len_array["netdev_recv", net_recv] = length 
 		tag_array["netdev_recv", net_recv] = dev_name 
