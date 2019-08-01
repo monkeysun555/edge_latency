@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tp_server
+  namespace: latency
+  labels:
+    env: test
+  annotations:
+    danm.k8s.io/interfaces: |
+      [
+        {"network":"management", "ip":"dynamic"},
+        {"network":"sriov-a", "ip":"dynamic"},
+        {"network":"ipvlan", "ip":"dynamic"}
+      ]
+spec:
+  containers:
+  - name: tp_server
+    image: monkeysun555/tp_server:v1
+    command: ["/bin/bash", "-c", "--" ]
+    args: [ "while true; do sleep 30; done;"]
+    resources:
+      requests:
+        nokia.k8s.io/sriov_ens11f1: '1'
+      limits:
+        nokia.k8s.io/sriov_ens11f1: '1'
+  nodeSelector:
+    # sriov: enabled
+    nodename: caas_master1
