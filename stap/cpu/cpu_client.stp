@@ -23,13 +23,14 @@ probe scheduler.cpu_off {
         next;
 
     cmdline[pid()] = cmdline_str();
-    cputimes[pid(), cpu()] <<< local_clock_ns() - oncpu[pid()];
-
+    # cputimes[pid(), cpu()] <<< local_clock_ns() - oncpu[pid()];
+    cputimes[pid()] <<< local_clock_ns() - oncpu[pid()];
     delete oncpu[pid()];
 }
 
+
 probe tcp.sendmsg {
-    if (dport == 22221){
+    if (isinstr(execname(), process)){
         tcp_send += 1
     }
 }
@@ -42,15 +43,23 @@ probe tcp.sendmsg {
 
 
 probe timer.s(1) {
-    printf("%6s %3s %6s %s\n", "PID", "CPU", "PCT", "CMDLINE");
-    foreach([pid+, cpu] in cputimes) {
-        cpupct = @sum(cputimes[pid, cpu]) * 10000 / NS_PER_SEC;
+    printf("%6s %6s %s\n", "PID", "PCT", "CMDLINE");
+    # foreach([pid+, cpu] in cputimes) {
+    #     cpupct = @sum(cputimes[pid, cpu]) * 10000 / NS_PER_SEC;
+    #     usage += cpupct
+    #     # printf("%6d %3d %3d.%02d %s\n", pid, cpu, 
+    #     #     cpupct / 100, cpupct % 100, cmdline[pid]);
+    # }
+
+    foreach([pid+] in cputimes) {
+        cpupct = cputimes[pid, cpu] * 10000 / NS_PER_SEC;
         usage += cpupct
         # printf("%6d %3d %3d.%02d %s\n", pid, cpu, 
         #     cpupct / 100, cpupct % 100, cmdline[pid]);
     }
-    printf("%6d %3s %3d.%02d %s\n", pid, "sum", 
-            usage / 100, usage % 100, cmdline[pid]);
+
+    printf("%6d %3d.%02d %s\n", pid, 
+            usage / 100, usage % 100, "sum");
     printf("TCP send: %8d packets.\n", tcp_send);
     printf("UDP send: %8d packets.\n", udp_send);
     delete cputimes;
