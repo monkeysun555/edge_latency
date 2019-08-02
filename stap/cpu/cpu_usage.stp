@@ -3,10 +3,10 @@ global cmdline;
 global oncpu;
 global usage;
 global NS_PER_SEC = 1000000000;
+
+global tcp_recv = 0;
 global process = @1;
 
-global tcp_recv;
-global tcp_send;
 
 probe begin {
     printf("Monitoring CPU usage of %s", process)
