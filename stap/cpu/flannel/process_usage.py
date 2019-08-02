@@ -35,6 +35,7 @@ def process_recording():
 						continue
 					if parse[1] == 'sum':
 						client_usages.append(float(parse[2]))
+	print("flannel CPU Usage Info")
 	print("Server average CPU usage: " + str(np.round(np.mean(server_usages),2)) + "%")
 	print("Client average CPU usage: " + str(np.round(np.mean(client_usages),2)) + "%")
 

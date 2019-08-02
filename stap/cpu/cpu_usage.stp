@@ -5,6 +5,9 @@ global usage;
 global NS_PER_SEC = 1000000000;
 global process = @1;
 
+global tcp_recv;
+global tcp_send;
+
 probe begin {
     printf("Monitoring CPU usage of %s", process)
 }
@@ -24,6 +27,15 @@ probe scheduler.cpu_off {
     delete oncpu[pid()];
 }
 
+probe tcp.receive {
+    if (dport == 22221){
+        tcp_recv <<< 1
+    }
+    
+  # printf(" %15s %15s  %5d  %5d  %d  %d  %d  %d  %d  %d\n",
+  #        saddr, daddr, sport, dport, urg, ack, psh, rst, syn, fin)
+}
+
 probe timer.s(1) {
     printf("%6s %3s %6s %s\n", "PID", "CPU", "PCT", "CMDLINE");
     foreach([pid+, cpu] in cputimes) {
@@ -34,6 +46,8 @@ probe timer.s(1) {
     }
     printf("%6d %3s %3d.%02d %s\n", pid, "sum", 
             usage / 100, usage % 100, cmdline[pid]);
+    printf("Receive: %8d packets", tcp_recv);
     delete cputimes;
     delete usage;
+    delete tcp_recv;
 }
