@@ -29,7 +29,7 @@ probe scheduler.cpu_off {
 
 probe tcp.receive {
     if (dport == 22221){
-        tcp_recv <<< 1
+        tcp_recv += 1
     }
     
   # printf(" %15s %15s  %5d  %5d  %d  %d  %d  %d  %d  %d\n",
