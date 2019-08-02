@@ -52,7 +52,7 @@ probe timer.s(1) {
     # }
 
     foreach([pid+] in cputimes) {
-        cpupct = cputimes[pid, cpu] * 10000 / NS_PER_SEC;
+        cpupct = cputimes[pid] * 10000 / NS_PER_SEC;
         usage += cpupct
         # printf("%6d %3d %3d.%02d %s\n", pid, cpu, 
         #     cpupct / 100, cpupct % 100, cmdline[pid]);
