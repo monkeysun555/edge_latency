@@ -1,0 +1,296 @@
+Monitoring CPU usage of tp_server   PID CPU    PCT CMDLINE
+     0 sum   0.00 
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+     0 sum   0.00 
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+     0 sum   0.00 
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+     0 sum   0.00 
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum   4.28 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.65 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.10 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.24 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.60 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.58 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.39 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.08 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  20.58 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.04 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.04 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.04 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.82 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.26 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.33 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.56 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.32 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  24.90 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.97 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.95 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.35 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.12 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.06 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.17 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.13 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.76 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.01 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.65 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.04 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.46 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.93 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.54 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.00 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.88 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.42 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.51 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  20.88 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.67 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.47 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.41 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.04 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.33 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.03 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.19 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.81 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.58 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.42 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.61 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.78 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.57 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.26 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.09 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.17 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.13 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.30 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.85 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.32 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.23 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.25 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.68 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.45 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.12 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  20.31 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.79 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.48 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  22.59 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  21.26 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+1093588 sum  15.46 ./tp_server.out
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+     0 sum   0.00 
+TCP recv:        0 packets.
+UDP recv:        0 packets.
+   PID CPU    PCT CMDLINE
+     0 sum   0.00 
+TCP recv:        0 packets.
+UDP recv:        0 packets.

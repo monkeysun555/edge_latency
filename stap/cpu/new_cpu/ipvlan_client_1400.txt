@@ -1,0 +1,260 @@
+Monitoring CPU usage of tcp_client   PID CPU    PCT CMDLINE
+     0 sum   0.00 
+TCP send:        0 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum   7.86 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:    86881 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  64.11 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   875607 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  62.40 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   866739 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  58.11 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   872179 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  59.69 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   864793 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  61.56 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   873255 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  61.21 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   870855 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  63.07 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   873917 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  67.80 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   863252 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  60.01 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   878085 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  59.14 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   866860 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  60.81 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   867650 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  58.66 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   874797 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  68.97 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   874177 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  61.35 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   875974 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  61.69 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   872406 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  69.50 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   874689 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  66.66 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   876539 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  66.14 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   870420 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  61.59 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   862433 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  69.44 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   878535 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  67.60 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   877062 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  60.22 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   877113 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  63.48 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   872365 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  66.17 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   869982 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  65.15 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   866916 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  62.02 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   869289 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  61.62 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   874805 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  66.90 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   870172 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  69.44 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   872191 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  62.54 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   875336 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  64.56 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   876657 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  76.43 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   874623 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  63.44 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   857093 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  64.43 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   861875 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  67.00 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   870595 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  61.35 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   875172 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  59.17 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   875812 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  60.53 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   859621 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  60.87 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   878438 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  64.11 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   866625 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  60.94 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   858650 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  60.42 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   875352 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  59.67 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   879604 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  61.78 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   861595 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  57.70 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   880885 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  61.97 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   868161 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum 122.39 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:  1741248 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  60.09 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   863315 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  61.78 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   877430 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  58.33 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   871267 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  63.41 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   872239 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  62.64 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   874454 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  62.36 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   879514 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  65.03 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   878760 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  65.40 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   872423 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  68.50 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   861319 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  65.31 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   869263 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  65.87 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   866347 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  67.36 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   858838 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  66.25 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   858622 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  62.14 ./tcp_client.out 172.16.16.5 172.16.16.4 1400
+TCP send:   873863 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+978964 sum  29.04 
+TCP send:   421246 packets.
+UDP send:        0 packets.
+   PID CPU    PCT CMDLINE
+     0 sum   0.00 
+TCP send:        0 packets.
+UDP send:        0 packets.
