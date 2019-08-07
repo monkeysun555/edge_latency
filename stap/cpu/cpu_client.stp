@@ -51,8 +51,8 @@ probe timer.s(1) {
     }
     printf("%6d %3s %3d.%02d %s\n", pid, "sum", 
             usage / 100, usage % 100, cmdline[pid]);
-    printf("TCP send: %8d packets.\n", tcp_send);
-    printf("UDP send: %8d packets.\n", udp_send);
+    # printf("TCP send: %8d packets.\n", tcp_send);
+    # printf("UDP send: %8d packets.\n", udp_send);
     delete cputimes;
     delete usage;
     # delete tcp_send;
