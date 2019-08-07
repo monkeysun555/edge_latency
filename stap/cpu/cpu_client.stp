@@ -4,8 +4,8 @@ global oncpu;
 global usage;
 global NS_PER_SEC = 1000000000;
 
-global tcp_send = 0;
-global udp_send = 0;
+# global tcp_send = 0;
+# global udp_send = 0;
 global process = @1;
 
 
@@ -28,17 +28,17 @@ probe scheduler.cpu_off {
     delete oncpu[pid()];
 }
 
-probe tcp.sendmsg {
-    if (isinstr(execname(), process)){
-        tcp_send += 1
-    }
-}
+# probe tcp.sendmsg {
+#     if (isinstr(execname(), process)){
+#         tcp_send += 1
+#     }
+# }
 
-probe udp.sendmsg {
-    if (dport == 22222){
-        udp_send += 1
-    }
-}
+# probe udp.sendmsg {
+#     if (dport == 22222){
+#         udp_send += 1
+#     }
+# }
 
 
 probe timer.s(1) {
@@ -55,6 +55,6 @@ probe timer.s(1) {
     printf("UDP send: %8d packets.\n", udp_send);
     delete cputimes;
     delete usage;
-    delete tcp_send;
-    delete udp_send;
+    # delete tcp_send;
+    # delete udp_send;
 }

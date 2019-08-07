@@ -4,8 +4,8 @@ global oncpu;
 global usage;
 global NS_PER_SEC = 1000000000;
 
-global tcp_recv = 0;
-global udp_recv = 0
+# global tcp_recv = 0;
+# global udp_recv = 0
 global process = @1;
 
 
@@ -28,17 +28,17 @@ probe scheduler.cpu_off {
     delete oncpu[pid()];
 }
 
-probe udp.recvmsg /* ,udp.sendmsg */ {
-  if (dport == 22221){
-        tcp_recv += 1
-    }
-}
+# probe udp.recvmsg /* ,udp.sendmsg */ {
+#   if (dport == 22221){
+#         tcp_recv += 1
+#     }
+# }
 
-probe tcp.receive {
-    if (dport == 22222){
-        udp_recv += 1
-    }
-}
+# probe tcp.receive {
+#     if (dport == 22222){
+#         udp_recv += 1
+#     }
+# }
 
 probe timer.s(1) {
     printf("%6s %3s %6s %s\n", "PID", "CPU", "PCT", "CMDLINE");
@@ -50,10 +50,10 @@ probe timer.s(1) {
     }
     printf("%6d %3s %3d.%02d %s\n", pid, "sum", 
             usage / 100, usage % 100, cmdline[pid]);
-    printf("TCP recv: %8d packets.\n", tcp_recv);
-    printf("UDP recv: %8d packets.\n", udp_recv);
+    # printf("TCP recv: %8d packets.\n", tcp_recv);
+    # printf("UDP recv: %8d packets.\n", udp_recv);
     delete cputimes;
     delete usage;
-    delete tcp_recv;
-    delete udp_recv;
+    # delete tcp_recv;
+    # delete udp_recv;
 }
